@@ -284,7 +284,7 @@ class OngkirView: UIView {
                 self.CityData.removeAll()
                 
                 for n in 0..<city.count {
-                    self.CityData.append(city[n].type + city[n].city_name)
+                    self.CityData.append(city[n].type + " " + city[n].city_name)
                 }
         
             } catch {

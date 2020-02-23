@@ -17,9 +17,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.title = "Check Ongkir"
         view.backgroundColor = .white
         
-        form  = OngkirView(frame: CGRect(x: 0, y: 80, width: view.frame.width, height: view.frame.height/2))
+        form  = OngkirView(frame: CGRect(x: 0, y: 130, width: view.frame.width, height: view.frame.height))
         
         view.addSubview(form)
         
