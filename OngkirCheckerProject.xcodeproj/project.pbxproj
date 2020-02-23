@@ -3,19 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2193EEC852943AE512332400 /* Pods_OngkirCheckerProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DFE74A8440124E2700277E3 /* Pods_OngkirCheckerProjectTests.framework */; };
+		38F5286A27364A06927ED563 /* Pods_OngkirCheckerProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67941511708F36FD5A94FA55 /* Pods_OngkirCheckerProject.framework */; };
+		61FFCBB2CFF6AD71C7266719 /* Pods_OngkirCheckerProject_OngkirCheckerProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFA6D3E573ED9A00CA2D6D8 /* Pods_OngkirCheckerProject_OngkirCheckerProjectUITests.framework */; };
 		B72BBF0A2401107700E5C01F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BBF092401107700E5C01F /* AppDelegate.swift */; };
 		B72BBF0C2401107700E5C01F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BBF0B2401107700E5C01F /* SceneDelegate.swift */; };
 		B72BBF0E2401107700E5C01F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BBF0D2401107700E5C01F /* ViewController.swift */; };
-		B72BBF112401107700E5C01F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72BBF0F2401107700E5C01F /* Main.storyboard */; };
 		B72BBF142401107700E5C01F /* OngkirCheckerProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B72BBF122401107700E5C01F /* OngkirCheckerProject.xcdatamodeld */; };
 		B72BBF162401107A00E5C01F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B72BBF152401107A00E5C01F /* Assets.xcassets */; };
 		B72BBF192401107A00E5C01F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72BBF172401107A00E5C01F /* LaunchScreen.storyboard */; };
 		B72BBF242401107A00E5C01F /* OngkirCheckerProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BBF232401107A00E5C01F /* OngkirCheckerProjectTests.swift */; };
 		B72BBF2F2401107A00E5C01F /* OngkirCheckerProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BBF2E2401107A00E5C01F /* OngkirCheckerProjectUITests.swift */; };
+		B72BBF42240117D200E5C01F /* OngkirView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BBF41240117D200E5C01F /* OngkirView.swift */; };
+		B72BBF8424015C9A00E5C01F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BBF8324015C9A00E5C01F /* Router.swift */; };
+		B72BBF8724015D0500E5C01F /* RajaOngkir.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BBF8624015D0500E5C01F /* RajaOngkir.swift */; };
+		B72BBF892401738C00E5C01F /* HttpUrlRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BBF882401738C00E5C01F /* HttpUrlRequest.swift */; };
+		B72BBF8B240177B300E5C01F /* ProvinceResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BBF8A240177B300E5C01F /* ProvinceResultModel.swift */; };
+		B72BBF8D240177BE00E5C01F /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BBF8C240177BE00E5C01F /* CityModel.swift */; };
+		B72BBF8F2401E66000E5C01F /* ProvinceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BBF8E2401E66000E5C01F /* ProvinceModel.swift */; };
+		B72BBF912401E69C00E5C01F /* QueryCityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BBF902401E69C00E5C01F /* QueryCityModel.swift */; };
+		B72BBF932401E85A00E5C01F /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BBF922401E85A00E5C01F /* StatusModel.swift */; };
+		B72BBF952401E99100E5C01F /* CityResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BBF942401E99100E5C01F /* CityResultModel.swift */; };
+		B72BBF972401E9B600E5C01F /* QueryProvinceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BBF962401E9B600E5C01F /* QueryProvinceModel.swift */; };
+		B72BBF992401F49600E5C01F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72BBF982401F49600E5C01F /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +50,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0452ED2CAD0C1ADF3F070E6E /* Pods-OngkirCheckerProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OngkirCheckerProject.debug.xcconfig"; path = "Target Support Files/Pods-OngkirCheckerProject/Pods-OngkirCheckerProject.debug.xcconfig"; sourceTree = "<group>"; };
+		2ED61CF8D4850C541E8F8D6E /* Pods-OngkirCheckerProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OngkirCheckerProject.release.xcconfig"; path = "Target Support Files/Pods-OngkirCheckerProject/Pods-OngkirCheckerProject.release.xcconfig"; sourceTree = "<group>"; };
+		30671D218F9AB5798C97E64A /* Pods-OngkirCheckerProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OngkirCheckerProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-OngkirCheckerProjectTests/Pods-OngkirCheckerProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4944C5E28AE419AE33DC3043 /* Pods-OngkirCheckerProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OngkirCheckerProjectTests.release.xcconfig"; path = "Target Support Files/Pods-OngkirCheckerProjectTests/Pods-OngkirCheckerProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		4DFE74A8440124E2700277E3 /* Pods_OngkirCheckerProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OngkirCheckerProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67941511708F36FD5A94FA55 /* Pods_OngkirCheckerProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OngkirCheckerProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		800856DAB81EAFF07364F501 /* Pods-OngkirCheckerProject-OngkirCheckerProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OngkirCheckerProject-OngkirCheckerProjectUITests.debug.xcconfig"; path = "Target Support Files/Pods-OngkirCheckerProject-OngkirCheckerProjectUITests/Pods-OngkirCheckerProject-OngkirCheckerProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B72BBF062401107700E5C01F /* OngkirCheckerProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OngkirCheckerProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B72BBF092401107700E5C01F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B72BBF0B2401107700E5C01F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B72BBF0D2401107700E5C01F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B72BBF102401107700E5C01F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B72BBF132401107700E5C01F /* OngkirCheckerProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OngkirCheckerProject.xcdatamodel; sourceTree = "<group>"; };
 		B72BBF152401107A00E5C01F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B72BBF182401107A00E5C01F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +71,20 @@
 		B72BBF2A2401107A00E5C01F /* OngkirCheckerProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OngkirCheckerProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B72BBF2E2401107A00E5C01F /* OngkirCheckerProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngkirCheckerProjectUITests.swift; sourceTree = "<group>"; };
 		B72BBF302401107A00E5C01F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B72BBF41240117D200E5C01F /* OngkirView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngkirView.swift; sourceTree = "<group>"; };
+		B72BBF8324015C9A00E5C01F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B72BBF8624015D0500E5C01F /* RajaOngkir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RajaOngkir.swift; sourceTree = "<group>"; };
+		B72BBF882401738C00E5C01F /* HttpUrlRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUrlRequest.swift; sourceTree = "<group>"; };
+		B72BBF8A240177B300E5C01F /* ProvinceResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceResultModel.swift; sourceTree = "<group>"; };
+		B72BBF8C240177BE00E5C01F /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		B72BBF8E2401E66000E5C01F /* ProvinceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceModel.swift; sourceTree = "<group>"; };
+		B72BBF902401E69C00E5C01F /* QueryCityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryCityModel.swift; sourceTree = "<group>"; };
+		B72BBF922401E85A00E5C01F /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
+		B72BBF942401E99100E5C01F /* CityResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityResultModel.swift; sourceTree = "<group>"; };
+		B72BBF962401E9B600E5C01F /* QueryProvinceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryProvinceModel.swift; sourceTree = "<group>"; };
+		B72BBF982401F49600E5C01F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFFA6D3E573ED9A00CA2D6D8 /* Pods_OngkirCheckerProject_OngkirCheckerProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OngkirCheckerProject_OngkirCheckerProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE01F996DCD37901168C8720 /* Pods-OngkirCheckerProject-OngkirCheckerProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OngkirCheckerProject-OngkirCheckerProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-OngkirCheckerProject-OngkirCheckerProjectUITests/Pods-OngkirCheckerProject-OngkirCheckerProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B72BBF992401F49600E5C01F /* SwiftyJSON.framework in Frameworks */,
+				38F5286A27364A06927ED563 /* Pods_OngkirCheckerProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2193EEC852943AE512332400 /* Pods_OngkirCheckerProjectTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +109,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61FFCBB2CFF6AD71C7266719 /* Pods_OngkirCheckerProject_OngkirCheckerProjectUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39069A93A187D42CCF685F77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B72BBF982401F49600E5C01F /* SwiftyJSON.framework */,
+				67941511708F36FD5A94FA55 /* Pods_OngkirCheckerProject.framework */,
+				BFFA6D3E573ED9A00CA2D6D8 /* Pods_OngkirCheckerProject_OngkirCheckerProjectUITests.framework */,
+				4DFE74A8440124E2700277E3 /* Pods_OngkirCheckerProjectTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B72BBEFD2401107700E5C01F = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +134,8 @@
 				B72BBF222401107A00E5C01F /* OngkirCheckerProjectTests */,
 				B72BBF2D2401107A00E5C01F /* OngkirCheckerProjectUITests */,
 				B72BBF072401107700E5C01F /* Products */,
+				E487A8A8B52D2BC8A177D3C4 /* Pods */,
+				39069A93A187D42CCF685F77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +152,13 @@
 		B72BBF082401107700E5C01F /* OngkirCheckerProject */ = {
 			isa = PBXGroup;
 			children = (
+				B72BBF8524015CF700E5C01F /* Config */,
+				B72BBF8224015B9600E5C01F /* Network */,
+				B72BBF40240117AB00E5C01F /* Models */,
+				B72BBF3E240117A000E5C01F /* Controllers */,
+				B72BBF3C2401179300E5C01F /* Views */,
 				B72BBF092401107700E5C01F /* AppDelegate.swift */,
 				B72BBF0B2401107700E5C01F /* SceneDelegate.swift */,
-				B72BBF0D2401107700E5C01F /* ViewController.swift */,
-				B72BBF0F2401107700E5C01F /* Main.storyboard */,
 				B72BBF152401107A00E5C01F /* Assets.xcassets */,
 				B72BBF172401107A00E5C01F /* LaunchScreen.storyboard */,
 				B72BBF1A2401107A00E5C01F /* Info.plist */,
@@ -131,6 +185,66 @@
 			path = OngkirCheckerProjectUITests;
 			sourceTree = "<group>";
 		};
+		B72BBF3C2401179300E5C01F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B72BBF41240117D200E5C01F /* OngkirView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B72BBF3E240117A000E5C01F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B72BBF0D2401107700E5C01F /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B72BBF40240117AB00E5C01F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B72BBF8A240177B300E5C01F /* ProvinceResultModel.swift */,
+				B72BBF8C240177BE00E5C01F /* CityModel.swift */,
+				B72BBF8E2401E66000E5C01F /* ProvinceModel.swift */,
+				B72BBF902401E69C00E5C01F /* QueryCityModel.swift */,
+				B72BBF922401E85A00E5C01F /* StatusModel.swift */,
+				B72BBF942401E99100E5C01F /* CityResultModel.swift */,
+				B72BBF962401E9B600E5C01F /* QueryProvinceModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B72BBF8224015B9600E5C01F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B72BBF8624015D0500E5C01F /* RajaOngkir.swift */,
+				B72BBF8324015C9A00E5C01F /* Router.swift */,
+				B72BBF882401738C00E5C01F /* HttpUrlRequest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B72BBF8524015CF700E5C01F /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		E487A8A8B52D2BC8A177D3C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0452ED2CAD0C1ADF3F070E6E /* Pods-OngkirCheckerProject.debug.xcconfig */,
+				2ED61CF8D4850C541E8F8D6E /* Pods-OngkirCheckerProject.release.xcconfig */,
+				800856DAB81EAFF07364F501 /* Pods-OngkirCheckerProject-OngkirCheckerProjectUITests.debug.xcconfig */,
+				FE01F996DCD37901168C8720 /* Pods-OngkirCheckerProject-OngkirCheckerProjectUITests.release.xcconfig */,
+				30671D218F9AB5798C97E64A /* Pods-OngkirCheckerProjectTests.debug.xcconfig */,
+				4944C5E28AE419AE33DC3043 /* Pods-OngkirCheckerProjectTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +252,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B72BBF332401107A00E5C01F /* Build configuration list for PBXNativeTarget "OngkirCheckerProject" */;
 			buildPhases = (
+				6B1A5704FFE27E13B7BA6035 /* [CP] Check Pods Manifest.lock */,
 				B72BBF022401107700E5C01F /* Sources */,
 				B72BBF032401107700E5C01F /* Frameworks */,
 				B72BBF042401107700E5C01F /* Resources */,
+				D733621714E990CB65A70872 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +271,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B72BBF362401107A00E5C01F /* Build configuration list for PBXNativeTarget "OngkirCheckerProjectTests" */;
 			buildPhases = (
+				92A8BE7F685C23B735915408 /* [CP] Check Pods Manifest.lock */,
 				B72BBF1B2401107A00E5C01F /* Sources */,
 				B72BBF1C2401107A00E5C01F /* Frameworks */,
 				B72BBF1D2401107A00E5C01F /* Resources */,
@@ -173,9 +290,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B72BBF392401107A00E5C01F /* Build configuration list for PBXNativeTarget "OngkirCheckerProjectUITests" */;
 			buildPhases = (
+				470054E5784481D99C4ADAA2 /* [CP] Check Pods Manifest.lock */,
 				B72BBF262401107A00E5C01F /* Sources */,
 				B72BBF272401107A00E5C01F /* Frameworks */,
 				B72BBF282401107A00E5C01F /* Resources */,
+				82AA3CE49DFBA7644FDF9F3D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,7 +356,6 @@
 			files = (
 				B72BBF192401107A00E5C01F /* LaunchScreen.storyboard in Resources */,
 				B72BBF162401107A00E5C01F /* Assets.xcassets in Resources */,
-				B72BBF112401107700E5C01F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,15 +375,129 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		470054E5784481D99C4ADAA2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OngkirCheckerProject-OngkirCheckerProjectUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B1A5704FFE27E13B7BA6035 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OngkirCheckerProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82AA3CE49DFBA7644FDF9F3D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OngkirCheckerProject-OngkirCheckerProjectUITests/Pods-OngkirCheckerProject-OngkirCheckerProjectUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OngkirCheckerProject-OngkirCheckerProjectUITests/Pods-OngkirCheckerProject-OngkirCheckerProjectUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OngkirCheckerProject-OngkirCheckerProjectUITests/Pods-OngkirCheckerProject-OngkirCheckerProjectUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92A8BE7F685C23B735915408 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OngkirCheckerProjectTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D733621714E990CB65A70872 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OngkirCheckerProject/Pods-OngkirCheckerProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OngkirCheckerProject/Pods-OngkirCheckerProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OngkirCheckerProject/Pods-OngkirCheckerProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B72BBF022401107700E5C01F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B72BBF8D240177BE00E5C01F /* CityModel.swift in Sources */,
+				B72BBF932401E85A00E5C01F /* StatusModel.swift in Sources */,
 				B72BBF0E2401107700E5C01F /* ViewController.swift in Sources */,
+				B72BBF42240117D200E5C01F /* OngkirView.swift in Sources */,
+				B72BBF8F2401E66000E5C01F /* ProvinceModel.swift in Sources */,
 				B72BBF142401107700E5C01F /* OngkirCheckerProject.xcdatamodeld in Sources */,
+				B72BBF8B240177B300E5C01F /* ProvinceResultModel.swift in Sources */,
+				B72BBF912401E69C00E5C01F /* QueryCityModel.swift in Sources */,
+				B72BBF8424015C9A00E5C01F /* Router.swift in Sources */,
+				B72BBF972401E9B600E5C01F /* QueryProvinceModel.swift in Sources */,
+				B72BBF952401E99100E5C01F /* CityResultModel.swift in Sources */,
 				B72BBF0A2401107700E5C01F /* AppDelegate.swift in Sources */,
+				B72BBF892401738C00E5C01F /* HttpUrlRequest.swift in Sources */,
 				B72BBF0C2401107700E5C01F /* SceneDelegate.swift in Sources */,
+				B72BBF8724015D0500E5C01F /* RajaOngkir.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +533,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B72BBF0F2401107700E5C01F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B72BBF102401107700E5C01F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B72BBF172401107A00E5C01F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -370,6 +594,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBSC_FLATTEN_NIBS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -424,6 +649,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBSC_FLATTEN_NIBS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -436,10 +662,12 @@
 		};
 		B72BBF342401107A00E5C01F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0452ED2CAD0C1ADF3F070E6E /* Pods-OngkirCheckerProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C476YGMRCM;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = OngkirCheckerProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,10 +682,12 @@
 		};
 		B72BBF352401107A00E5C01F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2ED61CF8D4850C541E8F8D6E /* Pods-OngkirCheckerProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C476YGMRCM;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = OngkirCheckerProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -472,6 +702,7 @@
 		};
 		B72BBF372401107A00E5C01F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30671D218F9AB5798C97E64A /* Pods-OngkirCheckerProjectTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +725,7 @@
 		};
 		B72BBF382401107A00E5C01F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4944C5E28AE419AE33DC3043 /* Pods-OngkirCheckerProjectTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -516,6 +748,7 @@
 		};
 		B72BBF3A2401107A00E5C01F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 800856DAB81EAFF07364F501 /* Pods-OngkirCheckerProject-OngkirCheckerProjectUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -536,6 +769,7 @@
 		};
 		B72BBF3B2401107A00E5C01F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE01F996DCD37901168C8720 /* Pods-OngkirCheckerProject-OngkirCheckerProjectUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

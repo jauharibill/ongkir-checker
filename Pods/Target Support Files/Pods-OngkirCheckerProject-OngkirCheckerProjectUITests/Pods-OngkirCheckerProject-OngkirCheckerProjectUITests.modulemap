@@ -1,0 +1,6 @@
+framework module Pods_OngkirCheckerProject_OngkirCheckerProjectUITests {
+  umbrella header "Pods-OngkirCheckerProject-OngkirCheckerProjectUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
