@@ -30,6 +30,8 @@
 		B72BBF952401E99100E5C01F /* CityResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BBF942401E99100E5C01F /* CityResultModel.swift */; };
 		B72BBF972401E9B600E5C01F /* QueryProvinceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BBF962401E9B600E5C01F /* QueryProvinceModel.swift */; };
 		B72BBF992401F49600E5C01F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72BBF982401F49600E5C01F /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B72BBF9B24026A4700E5C01F /* LocationDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BBF9A24026A4700E5C01F /* LocationDetailModel.swift */; };
+		B72BBF9D24026ADE00E5C01F /* CostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BBF9C24026ADE00E5C01F /* CostModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		B72BBF942401E99100E5C01F /* CityResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityResultModel.swift; sourceTree = "<group>"; };
 		B72BBF962401E9B600E5C01F /* QueryProvinceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryProvinceModel.swift; sourceTree = "<group>"; };
 		B72BBF982401F49600E5C01F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B72BBF9A24026A4700E5C01F /* LocationDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailModel.swift; sourceTree = "<group>"; };
+		B72BBF9C24026ADE00E5C01F /* CostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostModel.swift; sourceTree = "<group>"; };
 		BFFA6D3E573ED9A00CA2D6D8 /* Pods_OngkirCheckerProject_OngkirCheckerProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OngkirCheckerProject_OngkirCheckerProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE01F996DCD37901168C8720 /* Pods-OngkirCheckerProject-OngkirCheckerProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OngkirCheckerProject-OngkirCheckerProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-OngkirCheckerProject-OngkirCheckerProjectUITests/Pods-OngkirCheckerProject-OngkirCheckerProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -211,6 +215,8 @@
 				B72BBF922401E85A00E5C01F /* StatusModel.swift */,
 				B72BBF942401E99100E5C01F /* CityResultModel.swift */,
 				B72BBF962401E9B600E5C01F /* QueryProvinceModel.swift */,
+				B72BBF9A24026A4700E5C01F /* LocationDetailModel.swift */,
+				B72BBF9C24026ADE00E5C01F /* CostModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -495,8 +501,10 @@
 				B72BBF972401E9B600E5C01F /* QueryProvinceModel.swift in Sources */,
 				B72BBF952401E99100E5C01F /* CityResultModel.swift in Sources */,
 				B72BBF0A2401107700E5C01F /* AppDelegate.swift in Sources */,
+				B72BBF9D24026ADE00E5C01F /* CostModel.swift in Sources */,
 				B72BBF892401738C00E5C01F /* HttpUrlRequest.swift in Sources */,
 				B72BBF0C2401107700E5C01F /* SceneDelegate.swift in Sources */,
+				B72BBF9B24026A4700E5C01F /* LocationDetailModel.swift in Sources */,
 				B72BBF8724015D0500E5C01F /* RajaOngkir.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

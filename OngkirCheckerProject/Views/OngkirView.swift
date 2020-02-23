@@ -17,8 +17,10 @@ class OngkirView: UIView {
     var CourierData: [String] = [
         "JNE",
         "TIKI",
-        "JNT"
+        "POS"
     ]
+    
+    var CostData: [String] = []
     
     lazy var ProvinceTextView: UITextField = {
        
@@ -216,86 +218,6 @@ class OngkirView: UIView {
         prepareProvinceData()
     }
     
-    private func prepareProvinceData()
-    {
-        let url = URL(string: RajaOngkir.mainHost.rawValue + RajaOngkir.provincePath.rawValue)!
-        
-        var request = URLRequest(url: url)
-        
-        guard let deviceID = UIDevice.current.identifierForVendor?.uuidString else {
-           return
-        }
-        
-        request.addValue(RajaOngkir.apiKey.rawValue, forHTTPHeaderField: "key")
-        request.addValue(deviceID, forHTTPHeaderField: "ios-key")
-
-        let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
-                guard let result = data else { return }
-            
-            do {
-                
-                if error != nil {
-                    print(error)
-                }
-                
-                let json = try JSONDecoder().decode(ProvinceModel.self, from: result )
-                let province = json.rajaongkir.results
-                self.ProvinceData.removeAll()
-                
-                for n in 0..<province.count {
-                    self.ProvinceData.append(province[n].province)
-                }
-        
-            } catch {
-                print("error", error)
-            }
-            
-        }
-
-        task.resume()
-    }
-    
-    
-    private func prepareCityData(province_id: Int)
-    {
-        let url = URL(string: RajaOngkir.mainHost.rawValue + RajaOngkir.cityPath.rawValue + "?province=" + String(province_id))!
-        
-        var request = URLRequest(url: url)
-        
-        guard let deviceID = UIDevice.current.identifierForVendor?.uuidString else {
-           return
-        }
-        
-        request.addValue(RajaOngkir.apiKey.rawValue, forHTTPHeaderField: "key")
-        request.addValue(deviceID, forHTTPHeaderField: "ios-key")
-
-        let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
-                guard let result = data else { return }
-            
-            do {
-                
-                if error != nil {
-                    print(error)
-                }
-                
-                let json = try JSONDecoder().decode(CityModel.self, from: result )
-                let city = json.rajaongkir.results
-                
-                self.CityData.removeAll()
-                
-                for n in 0..<city.count {
-                    self.CityData.append(city[n].type + " " + city[n].city_name)
-                }
-        
-            } catch {
-                print("error", error)
-            }
-            
-        }
-
-        task.resume()
-    }
-    
     func dismissPickerView() {
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
@@ -363,6 +285,135 @@ class OngkirView: UIView {
         
         super.updateConstraints()
     }
+    
+    private func prepareProvinceData()
+     {
+         let url = URL(string: RajaOngkir.mainHost.rawValue + RajaOngkir.provincePath.rawValue)!
+         
+         var request = URLRequest(url: url)
+         
+         guard let deviceID = UIDevice.current.identifierForVendor?.uuidString else {
+            return
+         }
+         
+         request.addValue(RajaOngkir.apiKey.rawValue, forHTTPHeaderField: "key")
+         request.addValue(deviceID, forHTTPHeaderField: "ios-key")
+
+         let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
+                 guard let result = data else { return }
+             
+             do {
+                 
+                 if error != nil {
+                     print(error)
+                 }
+                 
+                 let json = try JSONDecoder().decode(ProvinceModel.self, from: result )
+                 let province = json.rajaongkir.results
+                 self.ProvinceData.removeAll()
+                 
+                 for n in 0..<province.count {
+                     self.ProvinceData.append(province[n].province)
+                 }
+         
+             } catch {
+                 print("error", error)
+             }
+             
+         }
+
+         task.resume()
+     }
+     
+     
+     private func prepareCityData(province_id: Int)
+     {
+         let url = URL(string: RajaOngkir.mainHost.rawValue + RajaOngkir.cityPath.rawValue + "?province=" + String(province_id))!
+         
+         var request = URLRequest(url: url)
+         
+         guard let deviceID = UIDevice.current.identifierForVendor?.uuidString else {
+            return
+         }
+         
+         request.addValue(RajaOngkir.apiKey.rawValue, forHTTPHeaderField: "key")
+         request.addValue(deviceID, forHTTPHeaderField: "ios-key")
+
+         let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
+                 guard let result = data else { return }
+             
+             do {
+                 
+                 if error != nil {
+                     print(error)
+                 }
+                 
+                 let json = try JSONDecoder().decode(CityModel.self, from: result )
+                 let city = json.rajaongkir.results
+                 
+                 self.CityData.removeAll()
+                 
+                 for n in 0..<city.count {
+                     self.CityData.append(city[n].type + " " + city[n].city_name)
+                 }
+         
+             } catch {
+                 print("error", error)
+             }
+             
+         }
+
+         task.resume()
+     }
+     
+     
+     private func getOngkir()
+     {
+         let url = URL(string: RajaOngkir.mainHost.rawValue + RajaOngkir.costPath.rawValue)!
+         
+         var request = URLRequest(url: url)
+         
+         guard let deviceID = UIDevice.current.identifierForVendor?.uuidString else {
+            return
+         }
+         
+         request.addValue(RajaOngkir.apiKey.rawValue, forHTTPHeaderField: "key")
+         request.addValue(deviceID, forHTTPHeaderField: "ios-key")
+         request.httpMethod = "POST"
+        
+         let requestBody = [
+            "origin" : "12",
+            "destination" : "45",
+            "weight" : "1",
+            "courier" : "jne"
+         ]
+
+         let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
+                 guard let result = data else { return }
+             
+             do {
+                 
+                 if error != nil {
+                     print(error)
+                 }
+                 
+                 let json = try JSONDecoder().decode(CostModel.self, from: result )
+                 let costs = json.rajaongkir.results.costs
+                 
+                 for n in 0..<costs.count {
+                    self.CostData.append(costs[n].service + " - " + String(costs[n].cost[0].value))
+                 }
+         
+             } catch {
+                 print("error", error)
+             }
+             
+         }
+
+         task.resume()
+     }
+     
+     
     
 }
 
