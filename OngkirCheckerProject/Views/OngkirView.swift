@@ -14,17 +14,11 @@ class OngkirView: UIView {
     
     var CityData: [String] = []
     
-    lazy var LocationView: UIView = {
-        
-        let view = UIView()
-        
-        view.backgroundColor = .green
-        
-        view.translatesAutoresizingMaskIntoConstraints = false
-        
-        return view
-        
-    }()
+    var CourierData: [String] = [
+        "JNE",
+        "TIKI",
+        "JNT"
+    ]
     
     lazy var ProvinceTextView: UITextField = {
        
@@ -122,6 +116,60 @@ class OngkirView: UIView {
         
         return ui
     }()
+    
+    lazy var WeightLabel: UILabel = {
+       
+        let ui = UILabel()
+        ui.translatesAutoresizingMaskIntoConstraints = false
+        ui.text = "Weight"
+        ui.font = UIFont(name: "System", size: 20)
+        ui.font = UIFont.boldSystemFont(ofSize: 17)
+        ui.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        
+        return ui
+        
+    }()
+    
+    lazy var WeightField: UITextField = {
+       
+        let ui = UITextField()
+        
+        ui.placeholder = "Weight"
+        ui.translatesAutoresizingMaskIntoConstraints = false
+        ui.keyboardType = .numberPad
+        
+        return ui
+    }()
+
+    lazy var CourierLabel: UILabel = {
+        let ui = UILabel()
+        ui.text = "Courier"
+        ui.font = UIFont(name: "System", size: 20)
+        ui.font = UIFont.boldSystemFont(ofSize: 17)
+        ui.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        ui.translatesAutoresizingMaskIntoConstraints = false
+        
+        return ui
+    }()
+    
+    lazy var CourierFIeld: UITextField = {
+        
+        let ui = UITextField()
+               
+        ui.placeholder = "Courier"
+        ui.translatesAutoresizingMaskIntoConstraints = false
+       
+        return ui
+    }()
+    
+    lazy var CourierPickerView: UIPickerView = {
+       
+        let ui = UIPickerView()
+        
+        ui.translatesAutoresizingMaskIntoConstraints = false
+        
+        return ui
+    }()
 
     override init(frame: CGRect) {
       super.init(frame: frame)
@@ -140,12 +188,17 @@ class OngkirView: UIView {
           
         CityView.dataSource = self
         CityView.delegate = self
+        
+        CourierPickerView.dataSource = self
+        CourierPickerView.delegate = self
           
         ProvinceTextView.inputView = ProvinceView
         CityTextView.inputView = CityView
         
         ProvinceDestinationView.inputView = ProvinceView
         CityDestinationView.inputView = CityView
+        
+        CourierFIeld.inputView = CourierPickerView
     
         self.addSubview(TombolView)
         self.addSubview(ProvinceTextView)
@@ -154,6 +207,10 @@ class OngkirView: UIView {
         self.addSubview(CityDestinationView)
         self.addSubview(FromTextLabel)
         self.addSubview(ToTextLabel)
+        self.addSubview(WeightLabel)
+        self.addSubview(WeightField)
+        self.addSubview(CourierLabel)
+        self.addSubview(CourierFIeld)
         
         dismissPickerView()
         prepareProvinceData()
@@ -227,7 +284,7 @@ class OngkirView: UIView {
                 self.CityData.removeAll()
                 
                 for n in 0..<city.count {
-                    self.CityData.append(city[n].city_name)
+                    self.CityData.append(city[n].type + city[n].city_name)
                 }
         
             } catch {
@@ -249,6 +306,8 @@ class OngkirView: UIView {
         CityTextView.inputAccessoryView = toolBar
         ProvinceDestinationView.inputAccessoryView = toolBar
         CityDestinationView.inputAccessoryView = toolBar
+        CourierFIeld.inputAccessoryView = toolBar
+        WeightField.inputAccessoryView = toolBar
     }
     
     @objc func endEditingProvince() {
@@ -281,10 +340,25 @@ class OngkirView: UIView {
         CityDestinationView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20).isActive = true
         CityDestinationView.topAnchor.constraint(equalTo: ProvinceDestinationView.bottomAnchor, constant: 20).isActive = true
         
+        WeightLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
+        WeightLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20).isActive = true
+        WeightLabel.topAnchor.constraint(equalTo: CityDestinationView.bottomAnchor, constant: 30).isActive = true
+        
+        WeightField.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
+        WeightField.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20).isActive = true
+        WeightField.topAnchor.constraint(equalTo: WeightLabel.bottomAnchor, constant: 30).isActive = true
+        
+        CourierLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
+        CourierLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20).isActive = true
+        CourierLabel.topAnchor.constraint(equalTo: WeightField.bottomAnchor, constant: 30).isActive = true
+        
+        CourierFIeld.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
+        CourierFIeld.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20).isActive = true
+        CourierFIeld.topAnchor.constraint(equalTo: CourierLabel.bottomAnchor, constant: 30).isActive = true
         
         TombolView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
         TombolView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20).isActive = true
-        TombolView.topAnchor.constraint(equalTo: CityDestinationView.bottomAnchor, constant: 20).isActive = true
+        TombolView.topAnchor.constraint(equalTo: CourierFIeld.bottomAnchor, constant: 30).isActive = true
         TombolView.widthAnchor.constraint(lessThanOrEqualToConstant: self.frame.width).isActive = true
         
         super.updateConstraints()
@@ -302,6 +376,8 @@ extension OngkirView: UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldD
     
         if ProvinceTextView.isFirstResponder || ProvinceDestinationView.isFirstResponder {
             return ProvinceData.count
+        } else if CourierFIeld.isFirstResponder {
+            return CourierData.count
         }
     
         return CityData.count
@@ -311,6 +387,8 @@ extension OngkirView: UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldD
     
         if ProvinceTextView.isFirstResponder || ProvinceDestinationView.isFirstResponder {
             return ProvinceData[row]
+        } else if CourierFIeld.isFirstResponder {
+            return CourierData[row]
         }
     
         return CityData[row]
@@ -326,6 +404,10 @@ extension OngkirView: UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldD
         if ProvinceDestinationView.isFirstResponder {
             ProvinceDestinationView.text = ProvinceData[row]
             prepareCityData(province_id: row+1)
+        }
+    
+        if CourierFIeld.isFirstResponder {
+            CourierFIeld.text = CourierData[row]
         }
     
         if CityTextView.isFirstResponder {
