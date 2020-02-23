@@ -1,0 +1,35 @@
+1.   Apa saja library iOS yang sering atau biasa anda pakai? Jelaskan kegunaannya bagi anda.
+
+answer : 
+- SwiftyJSON : saya gunakan untuk handle json response dari API untuk convert json to array/object, jadi saya bisa langsung ambil object sesuai structure api yang ada  
+- Alamofire : saya gunakan untuk kebutuhan http request. alamofire menyediakan method untuk mempersingkat pekerjaan di layer networking, seperti upload file, handling authentification etc.
+
+2.   Apakah  anda  menggunakan  prinsip  clean  code  atau  design  pattern  untuk  project  iOS anda?  Jelaskan  penerapan  clean  code  atau  design  pattern  yang  biasa  anda  gunakan dan manfaatnya untukanda.
+
+answer : 
+- Saya menggunakan basic pattern pada project IOS yaitu MVC, tetapi jika project yang kerjakan butuh untuk menggunakan pattern lain seperti MVP, Viper dll. maka saya akan menggunakannya, sesuai kebutuhan.
+
+3.   Apakah tantangan terbesar yang pernah anda temui dalam mengerjakan project iOS dan bagaimana anda menyelesaikannya dari sisiengineering?
+
+answer : 
+- membuat UI yang kebutuhannya animated biasanya mengakibatkan memory lack, karna itu dibutuhakn optimalisasi dan benchmarking performance.
+
+4.   Untuk efisiensi pengerjaan project dalam tim, bagaimana workflow anda dari proses development hingga merilis aplikasi hingga bisa digunakan oleh tester /client?
+
+answer : 
+
+- development workflow terbaik menurut saya yang pernah saya gunakan adalah menggunakan CI/CD dengan memanfaatkan platform bitrise.
+step : 
+a. setup CI/CD bitrise
+b. connect to repository
+c. setup trigger
+d. setiap kali rilis tag, bitrise akan melakukan building dan send file ipa ke email tester yang terdaftar 
+
+5.   Jelaskan teknik-teknik apa saja yang dapat meningkatkan performance dan keamanan sebuah aplikasiiOS.
+
+- untuk keamanan networking authentification harus menggunakan https dan taruh payload authentification di header, bukan di query param.
+- untuk meningkatkan performance, gunakan built in component yang di sediakan oleh ios, gunakan reuseable view seperti xib atau fullcode.
+
+6.   Apakah anda bersedia onsite di Malang ?
+
+- yup, saya bersedia.
